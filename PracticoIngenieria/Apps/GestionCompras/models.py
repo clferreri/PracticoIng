@@ -28,9 +28,9 @@ class Producto(models.Model):
 
 
 class Compra(models.Model):
-    Persona = models.ForeignKey(Persona)
-    Producto = models.ForeignKey(Producto)
-    Fecha = models.DateTimeField()
+    Persona = models.ForeignKey(Persona, null=False, blank=False, on_delete=models.CASCADE)
+    Producto = models.ForeignKey(Producto, null=False, blank=False, on_delete=models.CASCADE)
+    Fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.Persona + "compro " + self.Producto
