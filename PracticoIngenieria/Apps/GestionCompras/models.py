@@ -27,4 +27,10 @@ class Producto(models.Model):
         return self.Nombre
 
 
+class Compra(models.Model):
+    Persona = models.ForeignKey(Persona)
+    Producto = models.ForeignKey(Producto)
+    Fecha = models.DateTimeField()
 
+    def __str__(self):
+        return self.Persona + "compro " + self.Producto
