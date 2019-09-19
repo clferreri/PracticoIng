@@ -6,8 +6,8 @@ from django.db import models
 class Persona(models.Model):
     Nombre = models.CharField(max_length=25)
     Apellido = models.CharField(max_length=25)
-    telefono = models.CharField(max_length=25)
-    email = models.CharField(max_length=25)
+    Telefono = models.CharField(max_length=25)
+    Email = models.CharField(max_length=25)
 
     def NombreCompleto(self):
         cadena = "{0} {1}"

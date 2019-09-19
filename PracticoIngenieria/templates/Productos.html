@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+
+{% block contenido %}
+
+<h5>Listado de Productos</h5>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for p in productos %}
+            <tr>
+                <th scope="row">{{ p.Nombre }}</th>
+                <td>{{ p.Apellido }}</td>
+                <td>{{ p.Descripcion }}</td>
+            </tr>
+    	{% endfor %}
+    </tbody>
+  </table>
+</table>
+
+{% endblock %}
