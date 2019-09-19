@@ -1,0 +1,29 @@
+{% extends 'layout/base.html' %}
+
+{% block contenido %}
+
+<h5>Listado de Personas</h5>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for p in personas %}
+            <tr>
+                <th scope="row">{{ p.Nombre }}</th>
+                <td>{{ p.Apellido }}</td>
+                <td>{{ p.Telefono }}</td>
+                <td>{{ p.Email }}</td>
+            </tr>
+    	{% endfor %}
+    </tbody>
+  </table>
+</table>
+
+{% endblock %}
