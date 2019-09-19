@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 
-# Create your views here.
+from PracticoIngenieria.Apps.GestionCompras.models import Persona, Producto, Compra
+
+def listarPersonas(request):
+    personas = Persona.objects.all()
+    return render(request, 'personas.html', context={'personas': personas})
