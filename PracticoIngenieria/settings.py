@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'PracticoIngenieria.Apps.GestionCompras'
 ]
 
 MIDDLEWARE = [
@@ -75,12 +76,12 @@ WSGI_APPLICATION = 'PracticoIngenieria.wsgi.application'
 
 DATABASES = {
     'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'PracticoIngDB',
+            'ENGINE': 'mysql_cymysql',
+            'NAME': 'practicoingdb',
             'USER': 'root',
             'PASSWORD': '',
             'HOST': 'localhost',
-            'PORT': '8080',
+            'PORT': '3306',
 
     }
 }
