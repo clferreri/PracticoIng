@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+
+{% block contenido %}
+
+<h5>Listado de Compras</h5>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Persona</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Fecha y Hora</th>
+      </tr>
+    </thead>
+    <tbody>      
+      {% for c in compras %}
+            <tr>
+                <td>{{ c.Persona }}</th>
+                <td>{{ c.Producto }}</td>
+                <td>{{ c.Fecha }}</td>
+            </tr>
+    	{% endfor %}
+    </tbody>
+  </table>
+</table>
+
+{% endblock %}
