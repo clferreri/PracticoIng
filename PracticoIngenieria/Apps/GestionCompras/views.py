@@ -9,7 +9,7 @@ def listarPersonas(request):
 
 def listarProductos(request):
     productos = Producto.objects.all()
-    return render(request, 'templates/productos.html', context={'productos': productos})
+    return render(request, 'productos.html', context={'productos': productos})
 
 def listarCompras(request):
     compras = Compra.objects.all()

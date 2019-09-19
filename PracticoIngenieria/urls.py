@@ -19,5 +19,6 @@ from PracticoIngenieria.Apps.GestionCompras import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('personas/', views.listarPersonas)
+    path('personas/', views.listarPersonas),
+    path('productos/', views.listarProductos),
 ]
