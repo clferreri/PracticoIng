@@ -33,4 +33,4 @@ class Compra(models.Model):
     Fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.Persona + "compro " + self.Producto
+        return self.Persona.NombreCompleto() + " compro " + self.Producto.Nombre + " el dia: " + self.Fecha.strftime("%m/%d/%Y, a las %H:%M:%S")
